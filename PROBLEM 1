@@ -1,0 +1,59 @@
+// Create a C++ program to show the smallest and largest integer, 
+// the total, and the average of an array that take 10 elements only.
+
+#include <iostream> 
+#include <conio.h>
+
+using namespace std; 
+
+int main()
+{
+
+	double input[10];
+	int num, high, low;
+	double average, total;
+
+	for (num=0; num < 10; num++) 
+		input[num] = 0.0;
+
+	for (num=0; num < 10; num++)
+		cin >> input[num];
+	
+	for (num=0; num < 10; num++)
+		cout << input[num] << " ";
+		
+	cout << "\n";
+	
+	low = 0;
+	for (num=1; num < 10; num++)
+		if (input[low] > input[num])
+			low = num;
+			
+	low = input[low];
+	cout << "Smallest No.: " << low << endl; 
+	
+	cout << "\n";
+	
+	high = 0;
+	for (num=1; num < 10; num++)
+		if (input[high] < input[num])
+			high = num;
+			
+	high = input[high];
+	cout << "Highest No.: " << high << endl; 
+	
+	total = 0;
+	for (num=0; num < 10; num++)
+		total = total + input[num]; 
+	
+	average = total / 10;
+	
+	cout << "\n";
+	cout << "Total: " << total << endl;
+	
+	cout << "\n";
+	cout << "Average: " << average << endl;
+
+_getch();
+return 0;
+}
