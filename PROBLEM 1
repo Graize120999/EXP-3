@@ -8,22 +8,26 @@ using namespace std;
 
 int main()
 {
-
+	// DATA TYPE
 	double input[10];
 	int num, high, low;
 	double average, total;
-
+	
+	//INITIALIZING THE ARRAY
 	for (num=0; num < 10; num++) 
 		input[num] = 0.0;
-
+	
+	// READING DATA INTO AN ARRAY
 	for (num=0; num < 10; num++)
 		cin >> input[num];
 	
+	// PRINTING AN ARRAY
 	for (num=0; num < 10; num++)
 		cout << input[num] << " ";
 		
 	cout << "\n";
 	
+	//DETERMINING THE SMALLEST INTEGER
 	low = 0;
 	for (num=1; num < 10; num++)
 		if (input[low] > input[num])
@@ -34,6 +38,7 @@ int main()
 	
 	cout << "\n";
 	
+	// DETERMINING THE HIGHEST INTEGER
 	high = 0;
 	for (num=1; num < 10; num++)
 		if (input[high] < input[num])
@@ -42,6 +47,7 @@ int main()
 	high = input[high];
 	cout << "Highest No.: " << high << endl; 
 	
+	// FINDING THE SUM AND AVERAGE OF THE ARRAY LIST
 	total = 0;
 	for (num=0; num < 10; num++)
 		total = total + input[num]; 
