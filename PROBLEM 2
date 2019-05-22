@@ -1,0 +1,41 @@
+//Create a C++ Program that store temperature of Province A, 
+//Province B and Province C for a week(seven days) and display it.
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	double tem1, tem2, tem3;
+	int i;
+	
+	cout <<  "\t\t\t~~~Temperature of Province A, Province B, and Province C~~~" << endl;
+	cout <<  endl;
+	
+int provA[7];
+	for (i = 1; i <= 7; i++)
+		{
+			cout << "Province A Day " << i << " = ";
+			cin >> provA[i];
+		}
+	cout << "\n";
+	
+int provB[7];
+	for (i = 1; i <= 7; i++)
+		{
+			cout << "Province B Day " << i << " = ";
+			cin >> provB[i];
+		}		
+	cout << "\n";
+		
+int provC[7];
+	for (i = 1; i <= 7; i++)
+		{
+			cout << "Province C Day " << i << " = ";
+			cin >> provC[i];
+		}	
+			
+	_getch();
+	return 0;
+}
